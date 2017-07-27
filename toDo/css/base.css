@@ -1,0 +1,197 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -ms-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+    outline: 0;
+}
+
+body{
+    background: #00334b;
+    color: white;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+h1{
+    text-align: center;
+}
+input,
+.task-item,
+textarea,
+.task-detail{
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.task-item.completed{
+    color: #aaa;
+    opacity: 0.5;
+}
+
+.task-item.completed:after{
+    content: "";
+    height: 1px;
+    background: #aaa;
+    width: 97%;
+    position: relative;
+    top: -10px;
+    display: block;
+    float: right;
+}
+textarea,
+input[type = text],
+input[type = date],
+button{
+    border: 0;
+}
+textarea,
+input[type = text],
+input[type = date]{
+    width: 100%;
+    background: #ddd;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+textarea{
+    height: 100px;
+}
+textarea:hover,
+textarea:focus,
+input[type = text]:hover,
+input[type = date]:hover,
+input[type = text]:focus,
+input[type = date]:focus{
+    background: #eee;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+
+button{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #333;
+}
+
+.add-task input[type = text]{
+    float: left;
+    width: 84%;
+    margin-right: 1%;
+}
+
+button.primary,
+[type = submit]{
+    background: #46b1e4;
+}
+
+.add-task button[type = submit]{
+    width: 15%;
+    background: #46b1e4;
+}
+.add-task button[type = submit],.task-item{
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    -moz-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    box-shadow: 2px 3px rgba(0,0,0,.4);
+}
+
+.add-task button[type = submit]:hover{
+    background: #5fb9e4;
+}
+
+.task-item{
+    padding: 10px;
+    background: white;
+    color: #333;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.task-item:hover{
+    background: #ddd;
+}
+
+.task-list{
+    margin: 10px 0;
+}
+.task-detail-mask,
+.task-detail{
+    position: absolute;
+    display: none;
+}
+.task-detail{
+    background:  #fff;
+    color: #333;
+    padding:  10px;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    bottom:0;
+    right:0;
+    border-radius: 3px 0 0 3px;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 2px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.1);
+}
+
+.task-detail-mask{
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    padding: 10px;
+    border-radius: 3px;
+    /*background: rgba(30,30,30,.0);*/
+
+}
+.task-detail .input_item{
+    margin-bottom: 10px;
+}
+.task-detail .content{
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.task-content{
+    margin-left: 10px;
+}
+
+.action{
+    color: #888;
+    font-size: 90%;
+}
+.action:hover{
+    color: #333;
+}
+.fr{
+    float: right;
+}
+.msg{
+    display: none;
+    text-align: center;
+    background: #ffe264;
+    padding: 10px;
+    color: #333;
+}
+
+.anchor{
+    cursor: pointer;
+}
+
+.alerter{
+    width:0;
+    height:0;
+}
